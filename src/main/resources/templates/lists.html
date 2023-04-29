@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div>
+  <table class="table">
+    <tr>
+      <th>이미지</th>
+      <th>제목</th>
+    </tr>
+    <tr th:each="list : ${list} ">
+      <td><a th:text="${list.title}"></a></td>
+      <td><a th:text="${list.description}"></a></td>
+      <td><a th:href="${list.url}"><img th:src="${list.thumbnail}"></a></td>
+      <td><a th:href="${list.url}"><span th:text="${list.title}"></span></a></td>
+
+      </a>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
